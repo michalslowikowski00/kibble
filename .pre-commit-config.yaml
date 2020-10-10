@@ -29,3 +29,29 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 19.3b0
+    hooks:
+      - id: black
+        name: Black
+        types: [python]
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.5.4
+    hooks:
+      - id: isort
+        name: Isort
+        types: [python]
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.4
+    hooks:
+      - id: flake8
+        name: Flake8
+        types: [python]
+  - repo: https://github.com/pycqa/pydocstyle
+    rev: 5.1.1
+    hooks:
+      - id: pydocstyle
+        name: Pydocstyle
+        types: [python]
+        args:
+          - --convention=pep257
